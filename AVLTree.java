@@ -1,9 +1,13 @@
+//++ BINARY TREES - QUESTION 6 ++//
+
 class AVLTree {
   AVLTreeNode root;
   AVLTreeNode current; //might be needing this for later
+  int level;
 
   public AVLTree() {
-    root = null; current = root; 
+    root = null; current = root; int depth = 0;
+    // int size = 0;
   }
 
   public void createTestTree() {
@@ -17,9 +21,21 @@ class AVLTree {
     AVLTreeNode node_3 = new AVLTreeNode("4", node_1, node_2);
 
     tree.root = node_3;
+    // tree.size = 7;
   }
 
+  // Printing based on Preorder Traversal
   public void print() {
+    if (root == null){
+      System.out.println("The tree is empty");
+    } else {
+      System.out.println(current.value + " ");
+      while ( current.left != null){
+        for(int i = 0; i < depth; i++){
+          System.out.print("  ");
+        }
+      if current.left != null
+    }
 
   }
 
