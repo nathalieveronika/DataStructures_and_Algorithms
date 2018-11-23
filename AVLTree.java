@@ -30,7 +30,10 @@ class AVLTree {
     if (n == null){
       return;
     }
+    System.out.println(n.value + " ");
 
+    preOrder(n.left);
+    preOrder(n.right);
   }
 
   public void print() {
