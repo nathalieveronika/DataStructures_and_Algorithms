@@ -1,8 +1,9 @@
 class AVLTree {
   AVLTreeNode root;
+  AVLTreeNode current; //might be needing this for later
 
   public AVLTree() {
-    // TODO implement this
+    
   }
 
   public void createTestTree() {

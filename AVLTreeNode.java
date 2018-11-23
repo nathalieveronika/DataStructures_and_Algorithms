@@ -3,7 +3,7 @@ class AVLTreeNode {
   AVLTreeNode left;
   AVLTreeNode right;
 
-  AVLTreeNode(Object a, AVLTreeNode b, AVLTreeNode c){
+  AVLTreeNode(Object a, AVLTreeNode b, AVLTreeNode c) {
     value = a;
     left = b;
     right = c;
