@@ -89,6 +89,5 @@ class LinkedList {
         if(i == n-1){
             tail = new ListNode(get(n-2),null);
         }
-
     }
 }
