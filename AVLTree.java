@@ -3,10 +3,11 @@
 class AVLTree {
   AVLTreeNode root;
   AVLTreeNode current; //might be needing this for later
-  int level;
+  //int depth;
+  int n;
 
   public AVLTree() {
-    root = null; current = root; int depth = 0;
+    root = null; current = root; n = 0; // depth = 0;
     // int size = 0;
   }
 
@@ -29,20 +30,23 @@ class AVLTree {
     if (n == null){
       return;
     }
-    
+
   }
 
   public void print() {
     if (root == null){
       System.out.println("The tree is empty");
     } else {
-      System.out.println(current.value + " ");
+      int depth = 0;
+      System.out.println(current.value);
       while ( current.left != null){
+        depth++;
         for(int i = 0; i < depth; i++){
           System.out.print("  ");
         }
-      if current.left != null
+        System.out.println(current.value);
     }
+    if current.left != null
 
   }
 
