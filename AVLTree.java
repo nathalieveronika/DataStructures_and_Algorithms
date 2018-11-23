@@ -25,6 +25,13 @@ class AVLTree {
   }
 
   // Printing based on Preorder Traversal
+  private void preOrder(AVLNode n){
+    if (n == null){
+      return;
+    }
+    
+  }
+
   public void print() {
     if (root == null){
       System.out.println("The tree is empty");
