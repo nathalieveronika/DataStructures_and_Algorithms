@@ -2,9 +2,9 @@
 
 class AVLTree {
   AVLTreeNode root;
-  AVLTreeNode current; //might be needing this for later
+  //AVLTreeNode current; //might be needing this for later
   //int depth;
-  int n;
+  //int n;
 
   public AVLTree() {
     root = null; current = root; n = 0; // depth = 0;
@@ -12,7 +12,6 @@ class AVLTree {
   }
 
   public void createTestTree() {
-    AVLTree tree = new AVLTree();
     AVLTreeNode leaf_1 = new AVLTreeNode("1", null, null);
     AVLTreeNode leaf_2 = new AVLTreeNode("3", null, null);
     AVLTreeNode leaf_3 = new AVLTreeNode("5", null, null);
@@ -21,36 +20,27 @@ class AVLTree {
     AVLTreeNode node_2 = new AVLTreeNode("6", leaf_3, leaf_4);
     AVLTreeNode node_3 = new AVLTreeNode("4", node_1, node_2);
 
-    tree.root = node_3;
-    // tree.size = 7;
+    this.root = node_3;
   }
 
   // Printing based on Preorder Traversal
-  private void preOrder(AVLNode n){
+	public void print() {
+    preOrder(this.root,0);
+  }
+
+  private void preOrder(AVLTreeNode n, int height){
     if (n == null){
       return;
     }
-    System.out.println(n.value + " ");
 
-    preOrder(n.left);
-    preOrder(n.right);
-  }
-
-  public void print() {
-    if (root == null){
-      System.out.println("The tree is empty");
-    } else {
-      int depth = 0;
-      System.out.println(current.value);
-      while ( current.left != null){
-        depth++;
-        for(int i = 0; i < depth; i++){
-          System.out.print("  ");
-        }
-        System.out.println(current.value);
+    for(int i = 0; i < height; i++){
+      System.out.print("  ");
     }
-    if current.left != null
 
+    System.out.println(n.value);
+
+    preOrder(n.left, height+1);
+    preOrder(n.right, height+1);
   }
 
   // public boolean inTree(String e) {
