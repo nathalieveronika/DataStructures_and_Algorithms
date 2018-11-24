@@ -59,6 +59,7 @@ class AVLTree {
     return false;
   }
 
+// first insert String without balancing the tree
   public void basicinsert(String e){
     if(this.root == null){
       this.root = new AVLTreeNode(e, null, null);
