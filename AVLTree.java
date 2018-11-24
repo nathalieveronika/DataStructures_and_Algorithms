@@ -7,7 +7,7 @@ class AVLTree {
   //int n;
 
   public AVLTree() {
-    root = null; current = root; n = 0; // depth = 0;
+    root = null; //current = root; //n = 0; // depth = 0;
     // int size = 0;
   }
 
@@ -24,7 +24,7 @@ class AVLTree {
   }
 
   // Printing based on Preorder Traversal
-	public void print() {
+  public void print() {
     preOrder(this.root,0);
   }
 
@@ -43,10 +43,20 @@ class AVLTree {
     preOrder(n.right, height+1);
   }
 
-  // public boolean inTree(String e) {
-  //   // TODO implement this
-  // }
-  //
+  public boolean inTree(String e) {
+    while(this.root != null) {
+      if(e.compareTo(this.root.value) == 0){
+        return true;
+      }
+      if (e.compareTo(this.root.value) < 0){
+        this.root = this.root.left;
+      } else {
+        this.root = this.root.right;
+      }
+    }
+    return false;
+  }
+
   // public void insert(String e) {
   //   // TODO implement this
   // }

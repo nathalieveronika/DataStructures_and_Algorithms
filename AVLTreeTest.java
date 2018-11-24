@@ -3,6 +3,7 @@ public class AVLTreeTest {
     AVLTree t = new AVLTree();
     t.createTestTree();
     t.print();
-  }
+    System.out.println(t.inTree("10"));
 
+  }
 }
