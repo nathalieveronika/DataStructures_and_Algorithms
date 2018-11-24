@@ -4,6 +4,5 @@ public class AVLTreeTest {
     t.createTestTree();
     t.print();
     System.out.println(t.inTree("10"));
-
   }
 }
